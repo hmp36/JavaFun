@@ -1,84 +1,83 @@
 import java.util.ArrayList;
 
-public class BasicJava {
+public class JavaBasics {
 
 
-public void PrintNumbers {
-for (int i = 0; i < 256; i++){
-    System.out.println(i);
-}
-
-
-
-public void PrintOdd {
-for (int i = 0; i < 256;i++){
-    if (i % 2 != 0){
-
-    } 
-    System.out.println(i);
-}
+	public void PrintNumbers() {
+		for (int i = 0; i < 256; i++){
+    		System.out.println(i);
+			}
+		}
 
 
 
+	public void PrintOdd() {
+		for (int i = 0; i < 256;i++){
+    	if (i % 2 != 0){
 
-public void PrintSum() {
-    int num = 0;
-    for (int i = 0; i <= 255; i++){
-        int sum = num + i;
-        num = i;       
-        }
-    System.out.println("New number:" + i + " Sum " + sum);  
-}
+    		} 
+    	System.out.println(i);
+			}
 
-
+		}
 
 
 
-public void iteratingArray(int[] arr) {
-    for (int i = 0; i <= arr.length -1; i++) {
+	public void PrintSum() {
+    	int sum = 0;
+    	for (int i = 0; i < 255; i++){
+        	sum += i;  
+        	System.out.println("New number:" + i + " Sum " + sum);  
+				}
+			}
+
+
+
+	public void iteratingArray(int[] arr) {
+    	for (int i = 0; i < arr.length; i++) {
 			
 			System.out.println("# "+ arr[i] );
-    }
-}
+    			}
+			}
 
 
 
 
 
-public void findMax(int[] arr) {
+	public void findMax(int[] arr) {
 		int temp = 0;
 		for (int i = 0; i <= arr.length -1; i++) {
 			temp = arr[i];
-			if(arr[i] > temp) {
+				if(arr[i] > temp) {
 				temp = arr[i];
+				}
 			}
-		}
-		System.out.println("Max: " + temp);
+			System.out.println("Max: " + temp);
 	}
 
 
 
 
 
-public void getAverage(int[] arr) {
+	public void getAverage(int[] arr) {
 		double sum = 0;
-		for (int i = 0; i <= arr.length -1; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
-		}
-		System.out.println("Average: "+ sum/arr.length );
-	}
+				}
+			System.out.println("Average: "+ sum/arr.length );
+			}
 
 
 
 
 
-public void arrayOdd() {
+	public void arrayOdd() {
 		ArrayList<Integer> myArray = new ArrayList<Integer>();
 		for (int i = 1; i <= 255; i+=2) {
 			myArray.add(i);
-		}	
-		System.out.println("Array Odds: " + myArray);	
-    }
+			}	
+			System.out.println("Array Odds: " + myArray);	
+    	}
     
 
 
@@ -86,13 +85,13 @@ public void arrayOdd() {
 
 	public void greaterThanY(int[] arr, int y) {
 		int counter = 0;
-		for (int i = 0; i <= arr.length -1; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			if(arr[i] > y) {
 				counter++;
+				}
 			}
-		}
-		System.out.println("Greater than y: " + counter);
-    }
+			System.out.println("Greater than y: " + counter);
+    	}
     
 
 
@@ -102,8 +101,8 @@ public void arrayOdd() {
 		for (int i = 0; i <= arr.length -1; i++) {
 			
 			System.out.println("Square: "+ arr[i]*arr[i]);
-		}
-    }
+				}
+    		}
     
 
 
@@ -111,15 +110,15 @@ public void arrayOdd() {
 
 	public void eliminateNegatives(int[] arr) {
 		ArrayList<Integer> myArray = new ArrayList<Integer>();
-		for (int i = 0; i <= arr.length -1; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			if(arr[i] < 0) {
 				myArray.add(0);
-			} else {
+				} else {
 				myArray.add(arr[i]);
-			}	
-		}
-		System.out.println("No Negative Numnbers "+ myArray);
-    }
+						}	
+					}
+				System.out.println("No Negative Numnbers "+ myArray);
+    			}
     
 
 
