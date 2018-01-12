@@ -6,14 +6,14 @@ import java.util.Collections;
 public class Puzzles { 
     public String sumArray(int[] arr){
         int sum = 0; 
-        for (int i =0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++){
             sum += arr[i];
         }
         return String.valueOf(sum);
     }
     public String greaterThan(int[] arr){
         ArrayList<Integer> greaterArr = new ArrayList<Integer>();
-        for (int i =0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++){
             if (arr[i] > 10){
                 greaterArr.add(arr[i]);
             }
@@ -25,47 +25,35 @@ public class Puzzles {
     
 
 
-    public String[] shuffleNames(String[] names){
-        int len = names.length;
-        String tmp; 
-        Random rand = new Random();
-        for (int i = 0; i < len; i++){
-            int index = rand.nextInt(len-1); 
-            tmp = names[i];
-            names[i] = names[index]; 
-            names[index] = tmp;
+    public static ArrayList ArrayShuffle(){
+        ArrayList<String> thisArr = new ArrayList<Character>(Arrays.asList("Nancy", "Jinichi", "Fujibayashi","Momochi", "Ishikawa")
+        Collections.shuffle(thisArr); 
+        int i = 0;
+        ArrayList<String> newArr = new ArrayList<String>();
+        While (i < thisArr.size()){
+                if (thisArr.get(i).length() > 5) {
+                    newArr.add(thisArr.get(i));
+                }
+                System.out.printIn(thisArr.get(i));
+                i++;
+            }
+            return newArr;
         }
-        int num = 0;
-		for (int i = 0; i < len; i++){
-			if(names[i].length() > 5){
-				num++;
-			}
-		}
-		String[] newNames;
-		newNames = new String[num];
-		int counter = 0;
-		for (int i = 0; i < len; i++){
-			if(names[i].length() > 5){
-				newNames[counter] = names[i];
-				counter++;
-			}
-		}
-		return newNames;
-    }
 
 
 
+       
 
 
-    public void lettersOfTheAlphabet() {
+    public void Alphabet() {
 		char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 		Random rand = new Random();
-		char tmp;
+		char temp;
 		for (int i = 0; i < 25; i++){
 			int index = rand.nextInt(25) + 1;
-			tmp = alphabet[i];
+			temp = alphabet[i];
 			alphabet[i] = alphabet[index];
-			alphabet[index] = tmp;
+			alphabet[index] = temp;
 		}
 		System.out.println("The last letter of the shuffled array is " + alphabet[25]);
 		System.out.println("The first letter of the array is " + alphabet[0]);
@@ -93,7 +81,10 @@ public class Puzzles {
     
 
 
-
+    // Generate and return an array with 10 random numbers between 55-100
+    // and have it be sorted (showing the smallest number in the beginning)
+    // . Display all the numbers in the array. Next, display the minimum 
+    // value in the array as well as the maximum value.
 
     public int[] randomSortedNumbers(){
         Random rand = new Random();
@@ -102,14 +93,14 @@ public class Puzzles {
 		for (int i = 0; i < 10; i++){
 			arr[i] = rand.nextInt(46) + 55;
         }
-        int tmp; 
+        int temp; 
         arr = new int[10];
 
         for (int j = 1; j<10 - 1; j++){
             if (arr[j-1] > arr[j]){
-                tmp = arr[j-1]; 
+                temp = arr[j-1]; 
                 arr[j-1] = arr[j];
-                arr[j] = tmp;
+                arr[j] = temp;
             }
         }
     for (int i = 0; i < 10; i++){
@@ -125,17 +116,16 @@ public class Puzzles {
 
 
 
-    public static String createRandomString(int len) {
-        String randomString = ""; 
-        String alphabet = "abcdefghijklmnopqrstuvwxyz"; 
+    String[] alpha = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+            "t", "u", "v", "w", "x", "y", "z" };
+    String rando = ""; for(
+    int i = 0 ; i < 5 ; i++)
+    {
+        int position = randomly.nextInt(25);
+        String newChar = alpha[position];
+        rando += newChar;
+    }System.out.print(rando);
 
-        Random rand = new Random(); 
-        for(int i=0; i < len; i++) {
-            char letter = alphabet.charAt(rand.nextInt(26)); 
-            randomString += letter;
-        }
-
-        return randomString;
     }
 
 
